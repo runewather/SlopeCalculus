@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='../../../../favicon.ico')
+    title Narrow Jumbotron Template for Bootstrap
+    // Bootstrap core CSS
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='narrow-jumbotron.css', rel='stylesheet')
+  body
+    .container
+      .header.clearfix
+        nav
+          ul.nav.nav-pills.float-right
+            li.nav-item
+              a.nav-link.active(href='#')
+                | Home 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#') About
+            li.nav-item
+              a.nav-link(href='#') Contact
+        h3.text-muted Project name
+    block content
