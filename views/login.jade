@@ -1,0 +1,22 @@
+doctype html
+html
+  body
+    form(action='/login', method='post')
+      | Name:
+      br
+      input(type='text', name='name', value='Mickey')
+      br
+      |   Email:
+      br
+      input(type='email', name='email', value='Mouse')
+      br
+      |   Username:
+      br
+      input(type='text', name='username', value='Mouse')
+      br
+      |   Password:
+      br
+      input(type='password', name='password', value='Mouse')
+      br
+      br
+      input(type='submit', value='Submit')
