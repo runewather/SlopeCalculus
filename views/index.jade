@@ -1,37 +1,238 @@
-extends layout.jade
-block append content
-  .jumbotron
-      h1.display-3 Jumbotron heading
-      p.lead
-        | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      p
-        a.btn.btn-lg.btn-success(href='#', role='button') Sign up today
-    .row.marketing
-      .col-lg-6
-        h4 Subheading
-        p
-          | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-        h4 Subheading
-        p
-          | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-        h4 Subheading
-        p Maecenas sed diam eget risus varius blandit sit amet non magna.
-      .col-lg-6
-        h4 Subheading
-        p
-          | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-        h4 Subheading
-        p
-          | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-        h4 Subheading
-        p Maecenas sed diam eget risus varius blandit sit amet non magna.
-    footer.footer
-      p © Company 2017
-    // /container
-    //
-      Bootstrap core JavaScript
-      ==================================================
-    // Placed at the end of the document so the pages load faster
-    // IE10 viewport hack for Surface/desktop Windows 8 bug
-    script(src='../../../../assets/js/ie10-viewport-bug-workaround.js')
-   
+html(lang='pt-br')
+  head
+    meta(charset='utf-8')
+    title Slope Calculus | Aprenda upando
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='css/index_style.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i', rel='stylesheet')
+    link(rel='shortcut icon', type='image/png', href='img/slope_logo.png')
+  body
+    // Fixed navbar
+    nav#header.navbar.navbar-fixed-top
+      #header-container.container.navbar-container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand
+            img#logo.img-responsive(src='img/logo1.png')
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/login')
+                span.glyphicon.btn-glyphicon.glyphicon-log-out.img-circle.text-info
+                | Entrar
+        // /.nav-collapse
+      // /.container
+    // /.navbar
+    #full-video
+      // Video Section
+      section.content-section.video-section
+        video#video_background(preload='auto', autoplay='', loop='', poster='//Poster.jpg')
+          source(src='img/math.mp4', type='video/mp4')
+          source(src='img/math.ogg', type='video/ogg')
+          source(src='img/math.webm', type='video/webm')
+        .pattern-overlay
+          .container
+            .row
+              #frase.col-md-12
+                h1 Supere todos os seus limites
+                h1 Derive seus maiores problemas
+                h1 Demonstre a integral do seu potencial
+          button#btn_comecar.btn.btn-default.btn-lg(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', href='/register')
+            | Começar
+      // Video Section Ends Here
+      section
+        #descricao.container-fluid
+          .row
+            .col-md-4.col-xs-4.image
+              img.img-responsive(src='img/logo2.png')
+            #txtDesc.col-md-8
+              h1 Slope Calculus...
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet orci at risus
+                br
+                |                      pulvinar, ullamcorper venenatis augue semper. Sed tempus....!
+      .container
+        br
+        br
+        .row.grid-divider
+          .col-sm-4
+            .col-padding.text-center
+              h3 Column 1
+              center
+                img.img-responsive.livro1(src='img/livro_icon.png')
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate placeat suscipit maxime tenetur officiis asperiores quae molestias fugiat praesentium dolorum.
+          .col-sm-4
+            .col-padding.text-center
+              h3 Column 2
+              center
+                img.img-responsive.livro1(src='img/livro_icon.png')
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate placeat suscipit maxime tenetur officiis asperiores quae molestias fugiat praesentium dolorum.
+          .col-sm-4
+            .col-padding.text-center
+              h3 Column 3
+              center
+                img.img-responsive.livro1(src='img/livro_icon.png')
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate placeat suscipit maxime tenetur officiis asperiores quae molestias fugiat praesentium dolorum.
+      .container
+        .row
+          h1.text-center Gamificação
+          br
+          .col-md-4
+            // begin panel group
+            #accordion.panel-group(role='tablist', aria-multiselectable='true')
+              // panel 1
+              .panel.panel-default
+                // wrap panel heading in span to trigger image change as well as collapse
+                span.side-tab(data-target='#tab1', data-toggle='tab', role='tab', aria-expanded='false')
+                  #headingOne.panel-heading(role='tab', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                    h4.panel-title She Sells Seashells
+                #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                  .panel-body
+                    // Tab content goes here
+                    | That fall, as Nadia and Masha got shipped off to prison camps in Siberia, South Brooklyn tried to recover from the storm. My dad and I spent a lot of time in the same apartment engrossed in separate laptops, separate internet missives. He followed Russian news bloggers closely and would update me on troubling developments. A rise in protofascist nationalism
+              // / panel 1
+              // panel 2
+              .panel.panel-default
+                // wrap panel heading in span to trigger image change as well as collapse
+                span.side-tab(data-target='#tab2', data-toggle='tab', role='tab', aria-expanded='false')
+                  #headingTwo.panel-heading(role='tab', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                    h4.panel-title.collapsed TAB 2
+                #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                  .panel-body
+                    // Tab content goes here
+                    | tab 2 content
+              // / panel 2
+              // panel 3
+              .panel.panel-default
+                // wrap panel heading in span to trigger image change as well as collapse
+                span.side-tab(data-target='#tab3', data-toggle='tab', role='tab', aria-expanded='false')
+                  #headingThree.panel-heading(role='tab', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                    h4.panel-title TAB 3 
+                #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                  .panel-body
+                    // tab content goes here
+                    | tab 3 content
+            // / panel-group
+          // /col-md-4
+          .col-md-8
+            // begin macbook pro mockup
+            .md-macbook-pro.md-glare
+              .md-lid
+                .md-camera
+                .md-screen
+                  // content goes here
+                  .tab-featured-image
+                    .tab-content
+                      #tab1.tab-pane.in.active
+                        img.img.img-responsive(src='https://ununsplash.imgix.net/photo-1417024321782-1375735f8987?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950', alt='tab1')
+                      #tab2.tab-pane
+                        img(src='https://unsplash.imgix.net/uploads/1411724908903377d4696/2e9b0cb2?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950')
+                      #tab3.tab-pane.fade
+                        img.img.img-responsive(src='https://ununsplash.imgix.net/photo-1422479516648-9b1f0b6e8da8?dpr=2&fit=crop&fm=jpg&h=650&q=75&w=950', alt='tab1')
+              .md-base
+            // end macbook pro mockup
+          // / .col-md-8
+        // / .row
+      // end sidetab container
+      footer
+        #footer.footer
+          .container
+            .row
+              .col-lg-2.col-md-2.col-sm-4.col-xs-6
+                h3  Lorem Ipsum 
+                ul
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+              .col-lg-2.col-md-2.col-sm-4.col-xs-6
+                h3  Lorem Ipsum 
+                ul
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+              .col-lg-2.col-md-2.col-sm-4.col-xs-6
+                h3  Lorem Ipsum 
+                ul
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+              .col-lg-2.col-md-2.col-sm-4.col-xs-6
+                h3  Lorem Ipsum 
+                ul
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+                  li
+                    a(href='#')  Lorem Ipsum 
+              .col-lg-3.col-md-3.col-sm-6.col-xs-12
+                h3  Lorem Ipsum 
+                ul
+                  li
+                    .input-append.newsletter-box.text-center
+                      input.full.text-center(type='text', placeholder='Email ')
+                      button.btn.bg-gray(type='button')
+                        | Lorem ipsum 
+                        i.fa.fa-long-arrow-right  
+                ul.social
+                  li
+                    a(href='#')
+                      i.fa.fa-facebook    
+                  li
+                    a(href='#')
+                      i.fa.fa-twitter    
+                  li
+                    a(href='#')
+                      i.fa.fa-google-plus    
+                  li
+                    a(href='#')
+                      i.fa.fa-pinterest    
+                  li
+                    a(href='#')
+                      i.fa.fa-youtube    
+            // /.row
+          // /.container
+        // /.footer
+        .footer-bottom
+          .container
+            p.pull-left  Copyright © Footer E-commerce Plugin 2014. All right reserved. 
+            .pull-right
+              ul.nav.nav-pills.payments
+                li
+                  i.fa.fa-cc-visa
+                li
+                  i.fa.fa-cc-mastercard
+                li
+                  i.fa.fa-cc-amex
+                li
+                  i.fa.fa-cc-paypal
+        // /.footer-bottom
+    script(type='text/javascript').
+      $(document).ready(function () {
+      $(".player").mb_YTPlayer();
+      });
