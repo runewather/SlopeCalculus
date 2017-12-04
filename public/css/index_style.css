@@ -1,0 +1,657 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.video-section .pattern-overlay {
+padding: 70px 0 32px;
+min-height: 637px; 
+background-color: rgba(2, 75, 140, 0.8);
+/* Incase of overlay problems just increase the min-height*/
+}
+
+.video-section h1{  
+  color:#fff;
+  text-align: justify;
+  font-size: 45px;
+  padding-left: 180px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px #000000;    
+}
+
+div#frase{
+  padding-top: 100px;
+}
+button.btn-default {
+  border-radius: 20px;
+  background-color: #3FED09;
+  box-shadow: 2px 2px 8px #888888;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  width: 180px;
+  text-align: center;
+  margin-left: 45%;
+  margin-top: 3%;
+}
+button.btn-default:hover{
+  background-color: #FFAB00;
+  color: rgb(2, 75, 140);  
+}
+
+.video-section {
+  overflow: hidden;
+  position: relative;
+}
+
+#video_background { 
+  position: absolute; 
+  top: 0; 
+  right: 0px; 
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto; 
+  z-index: -1000; 
+  overflow: hidden; 
+}
+
+
+.navbar-fixed-top{
+  
+  position: absolute; 
+}
+.navbar-fixed-top .navbar-header > a {
+  
+}
+.navbar-fixed-top .navbar-nav > li > a{
+  color:#ffffff ;
+  font-size: 22px;
+  padding-top: 40px;
+}
+.navbar-fixed-top .navbar-nav > .active >li> a,
+.navbar-fixed-top .navbar-nav > .active >li> a:hover,
+.navbar-fixed-top .navbar-nav > .active >li> a:focus {
+  background-color: none;
+    
+}
+
+.btn-glyphicon { 
+  padding:8px;
+  background:#ffffff;
+  margin-right:4px; 
+}
+
+#descricao{
+  background-color: #ededed;  
+}
+section #descricao p{
+  text-align: justify;
+  color:#134d73;
+  font-size: 18px;
+}
+div.image{
+  padding-left: 108px;
+  padding-top: 8px;
+}
+div#txtDesc{
+  padding-top: 80px;
+}
+/* Tablet and bigger */
+@media ( min-width: 768px ) {
+    .grid-divider {
+        position: relative;
+        padding: 0;
+    }
+    .grid-divider>[class*='col-'] {
+        position: static;
+    }
+    .grid-divider>[class*='col-']:nth-child(n+2):before {
+        content: "";
+        border-left: 1px solid #DDD;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .col-padding {
+        padding: 0 15px;
+    }
+}
+
+.panel-heading:hover {
+    cursor:pointer;
+}
+.panel-heading {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.side-tab:hover {
+        cursor: pointer;
+    }
+    .panel.panel-default {
+        border: none;
+        box-shadow: none !important;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        
+    }
+    .panel-heading {
+        border: none;
+        background-color: #eee;
+    
+    }
+    .panel-body {
+        background-color: #f5f5f5;
+    }
+    .panel-title {
+        font-weight: 400;
+        color: $white;
+    }
+
+/*----------------------------------
+    Macbook pro mockup from:
+    http://jaredhardy.com/minimal-devices/
+    
+----------------------------------*/
+
+.md-macbook-pro {
+  display: block;
+  width: 55.3125em;
+  height: 31.875em;
+  font-size: 13px;
+  margin: 0 auto;
+
+  @media (max-width:1199px){
+    font-size: 11px;
+  }
+  @media (max-width:1024px){
+    font-size: 10px;
+  }
+
+  @media (max-width:767px){
+    font-size: 7px;
+  }
+
+  @media (max-width:320px){
+    font-size: 5px;
+  }
+
+}
+.md-macbook-pro .md-lid {
+  width: 45em;
+  height: 30.625em;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1.875em;
+  border: solid 0.1875em #cdced1;
+  background: #131313;
+}
+.md-macbook-pro .md-camera {
+  width: 0.375em;
+  height: 0.375em;
+  margin: 0 auto;
+  position: relative;
+  top: 1.0625em;
+  background: #000;
+  border-radius: 100%;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+.md-macbook-pro .md-camera:after {
+  content: "";
+  display: block;
+  width: 0.125em;
+  height: 0.125em;
+  position: absolute;
+  left: 0.125em;
+  top: 0.0625em;
+  background: #353542;
+  border-radius: 100%;
+}
+.md-macbook-pro .md-screen {
+  width: 42.25em;
+  height: 26.375em;
+  margin: 0 auto;
+  position: relative;
+  top: 2.0625em;
+  // background: #1d1d1d;
+  background: #fff;
+  overflow: hidden;
+}
+.md-macbook-pro .md-screen img {
+  width: 100%;
+}
+.md-macbook-pro .md-base {
+  width: 100%;
+  height: 0.9375em;
+  position: relative;
+  top: -0.75em;
+  background: #c6c7ca;
+}
+.md-macbook-pro .md-base:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5em;
+  margin: 0 auto;
+  position: relative;
+  bottom: -0.1875em;
+  background: #b9babe;
+  border-radius: 0 0 1.25em 1.25em;
+}
+.md-macbook-pro .md-base:before {
+  content: "";
+  display: block;
+  width: 7.6875em;
+  height: 0.625em;
+  margin: 0 auto;
+  position: relative;
+  background: #a6a8ad;
+  border-radius: 0 0 0.625em 0.625em;
+}
+.md-macbook-pro.md-glare .md-lid:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 1.25em 0 0;
+  background: -webkit-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -moz-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -o-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: linear-gradient(53deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+}
+
+/*botao scroll-top*/
+
+/*FOOTER*/
+.footer-bottom {
+  background: #042A4A;
+  border-top: 1px solid #DDDDDD;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #888888;
+}
+.footer-bottom p.pull-left {
+  padding-top: 6px;
+}
+.payments {
+  font-size: 1.5em; 
+}
+
+.panel-heading:hover {
+    cursor:pointer;
+}
+.panel-heading {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.side-tab {
+    padding: .5em!important;
+}
+
+.side-tab:hover {
+        cursor: pointer;
+    }
+    .panel.panel-default {
+        border: none;
+        box-shadow: none !important;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        
+    }
+    .panel-heading {
+        border: none;
+        background-color: #eee;
+        padding: 20px;
+    }
+    .panel-body {
+        background-color: #b1ea8f;
+        padding: 20px;
+        font-weight: light;
+        border-radius: 0px 0px 5px 5px;
+        border-bottom: 5px solid #eee;
+    }
+    .panel-title {
+        font-weight: 300;
+        color: #323232;
+        font-size: 1.75em;
+    }
+
+/*----------------------------------
+    Macbook pro mockup from:
+    http://jaredhardy.com/minimal-devices/ 
+    EDITED***
+
+----------------------------------*/
+
+.md-macbook-pro {
+  display: block;
+  width: 55.3125em;
+  height: 31.875em;
+  font-size: 13px;
+  margin: 0 auto;
+
+  @media (max-width:1199px){
+    font-size: 11px;
+  }
+  @media (max-width:1024px){
+    font-size: 10px;
+  }
+
+  @media (max-width:767px){
+    font-size: 7px;
+    .md-lid {
+     border-radius: 15px!important;
+     }
+  }
+
+  @media (max-width:320px){
+    font-size: 5px;
+    .md-lid {
+     border-radius: 15px!important;
+     }
+  }
+
+}
+.md-macbook-pro .md-lid {
+  width: 45em;
+  height: 30.625em;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 30px;
+  border: solid 0.1875em #cdced1;
+  background: #131313;
+}
+.md-macbook-pro .md-camera {
+  width: 0.375em;
+  height: 0.375em;
+  margin: 0 auto;
+  position: relative;
+  top: .6em;
+  background: #323232;
+  border-radius: 100%;
+}
+.md-macbook-pro .md-camera:after {
+  content: "";
+  display: block;
+  width: 0.125em;
+  height: 0.125em;
+  position: absolute;
+  left: 0.125em;
+  top: 0.0625em;
+  background: #353542;
+  border-radius: 100%;
+}
+.md-macbook-pro .md-screen {
+  width: 42.25em;
+  height: 27em;
+  margin: 0 auto;
+  position: relative;
+  top: 1em;
+  // background: #1d1d1d;
+  background: #fff;
+  overflow: hidden;
+}
+.md-macbook-pro .md-screen img {
+  width: 100%;
+}
+.md-macbook-pro .md-base {
+  width: 100%;
+  height: 1em;
+  position: relative;
+  top: -0.8em;
+      background: rgba(222, 221, 221, 0.98);
+    -webkit-box-shadow: inset 0px -4px 13px 3px rgba(34,34,34,0.6);
+    -moz-box-shadow: inset 0px -4px 13px 3px rgba(34,34,34,0.6);
+    box-shadow: inset 0px -4px 13px 3px rgba(34, 34, 34, 0.25);
+    border-radius: 2px 2px 0px 0px;
+}
+.md-macbook-pro .md-base:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.8em;
+  margin: 0 auto;
+  position: relative;
+  bottom: -0.1875em;
+  background: #fff;
+      border-bottom-left-radius: 90px 18px;
+    border-bottom-right-radius: 90px 18px;
+    background: rgba(190, 190, 190, 0.28);
+    -webkit-box-shadow: inset 0 -4px 13px 3px rgba(78, 78, 78, 0.82);
+    -moz-box-shadow: inset 0 -4px 13px 3px rgba(78, 78, 78, 0.82);
+    box-shadow: inset 0 -4px 13px 3px rgba(78, 78, 78, 0.82);
+}
+.md-macbook-pro .md-base:before {
+  content: "";
+  display: block;
+  width: 7.6875em;
+  height: 0.625em;
+  margin: 0 auto;
+  position: relative;
+      background: #BDBCBC;
+    border-radius: 0 0 .625em .625em;
+    -webkit-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    -webkit-box-shadow: inset 0 -3px 10px rgb(130, 128, 128);
+    -moz-box-shadow: inset 0 -3px 10px rgb(130, 128, 128);
+    box-shadow: inset 0 -3px 10px rgb(130, 128, 128);
+}
+.md-macbook-pro.md-glare .md-lid:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 1.25em 0 0;
+  background: -webkit-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -moz-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: -o-linear-gradient(37deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+  background: linear-gradient(53deg, rgba(255, 255, 255, 0) 50%, rgba(247, 248, 240, 0.025) 50%, rgba(250, 245, 252, 0.08));
+}
+
+span.round-tab {
+    width: 180px;
+    height: 180px;
+    line-height: 3.25;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid #eee;
+    z-index: 9;
+    left: 0;
+    text-align: center;
+    font-size: 60px;
+    color: $gray-dark;
+    -webkit-transition: color .5s ease-in; /*safari and chrome */
+    -moz-transition: color .5s ease-in; /* firefox */
+    -o-transition: color .5s ease-in; /* opera */
+}
+
+a span.round-tab:hover {
+  color: $brand-success;
+}
+
+@media( max-width : 920px ) {
+
+    span.round-tab {
+        font-size: 40px;
+        width: 110px;
+        height: 110px;
+        line-height: 3;
+    }
+}
+
+@media( max-width : 767px ) {
+
+    span.round-tab {
+        font-size: 30px;
+        width: 90px;
+        height: 90px;
+        line-height: 3;
+    }
+}
+
+@media( max-width : 320px ) {
+
+    span.round-tab {
+        font-size: 30px;
+        width: 90px;
+        height: 90px;
+        line-height: 3;
+    }
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+.card {
+    border-radius: 10px!important;
+    border-bottom: 5px solid #eee!important;
+}
+
+.accordion-panel {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+    border-left: none!important;
+    border-right: none!important;
+    border-top: none!important;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.accordion-title  {
+    text-transform: uppercase;
+    font-weight: 100!important;
+    padding: .1em 0em 0em 0em!important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0!important;
+}
+
+.accordion-title>a:hover {
+    text-decoration: none!important;
+}
+
+.accordion-content {
+    margin: 0em 3em 3em 3em;
+}
+
+.divider {
+    height: 3px;
+    border-radius: 3px;
+    margin: 0em 3em 3em 3em;
+    background: #eee;
+}
+.section-heading {
+  margin-top: 0;
+}
+.service-box {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+@media (min-width: 992px) {
+  .service-box {
+    margin: 20px auto 0;
+  }
+}
+.service-box p {
+  margin-bottom: 0;
+}
+.text-primary {
+  color: #F05F40;
+}
+hr.primary{
+   border-color: #F05F40;
+  border-width: 3px;
+  max-width: 50px; 
+}
+div.text-center h2{
+  color: #134d73;
+}
+section#services{
+  background-color: #E0FFFF;
+}
+
+/*Login*/
+#login-dp{
+  border-radius: 20px;
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
+li a.dropdown-toggle:hover{
+  background-color: #084276;  
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background-color: #084276;  
+}

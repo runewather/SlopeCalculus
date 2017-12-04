@@ -1,0 +1,210 @@
+doctype html
+html
+  title Slope Calculus | Aprenda upando
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+  link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i', rel='stylesheet')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  link(href='css/bootstrap.min.css', rel='stylesheet')
+  link(rel='stylesheet', type='text/css', href='css/teste.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  link(rel='shortcut icon', type='image/png', href='img/slope_logo.png')
+  body
+    #throbber(style='display:none; min-height:120px;')
+    #noty-holder
+    #wrapper
+      // Navigation
+      nav.navbar.navbar-fixed-top(role='navigation')
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand
+            img#logo.img-responsive(src='img/logo1.png')
+        // Top Menu Items
+        ul.nav.navbar-right.top-nav
+          li
+            a(href='#', data-placement='bottom', data-toggle='tooltip', data-original-title='Stats')
+              i.fa.fa-bar-chart-o
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | #{username} 
+              b.fa.fa-angle-down
+            ul.dropdown-menu
+              li
+                a(href='#')
+                  i.fa.fa-fw.fa-user
+                  |  Editar Perfil
+              li
+                a(href='#')
+                  i.fa.fa-fw.fa-cog
+                  |  Trocar senha
+              li.divider
+              li
+                a(href='#')
+                  i.fa.fa-fw.fa-power-off
+                  |  Sair
+        // Sidebar Menu Items - These collapse to the responsive navigation menu on small screens
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          ul.nav.navbar-nav.side-nav
+            li
+              a(href='#', data-toggle='collapse', data-target='#submenu-1')
+                i.fa.fa-question-circle
+                |  Questões 
+                i.fa.fa-fw.fa-angle-down.pull-right
+              ul#submenu-1.collapse
+                li
+                  a(href='#')
+                    i.fa.fa-angle-double-right
+                    |  QUESTÃO 1.1
+                li
+                  a(href='#')
+                    i.fa.fa-angle-double-right
+                    |  QUESTÃO 1.2
+                li
+                  a(href='#')
+                    i.fa.fa-angle-double-right
+                    |  QUESTÃO 1.3
+            li
+              a(href='#', data-toggle='collapse', data-target='#submenu-2')
+                i.fa.fa-book
+                |   Outros assuntos 
+                i.fa.fa-fw.fa-angle-down.pull-right
+              ul#submenu-2.collapse
+                li
+                  a(href='#')
+                    i.fa.fa-angle-double-right
+                    |  SUBMENU 2.1
+                li
+                  a(href='#')
+                    i.fa.fa-angle-double-right
+                    |  SUBMENU 2.2
+                li
+                  a(href='#')
+                    i.fa.fa-angle-double-right
+                    |  SUBMENU 2.3
+            li
+              a(href='investigaciones/favoritas')
+                i.fa.fa-fw.fa-user-plus
+                |   MENU 3
+            li
+              a(href='sugerencias')
+                i.fa.fa-fw.fa-paper-plane-o
+                |  MENU 4
+            li
+              a(href='faq')
+                i.fa.fa-fw.fa.fa-question-circle
+                |  MENU 5
+        // /.navbar-collapse
+      #page-wrapper
+        .container-fluid
+          // Page Heading
+          #content.col-sm-12.col-md-12.well
+            .panel-heading
+              h2.text-center Conteúdo
+            .panel-body
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    img.img-responsive(src='#{statement}')
+                  .modal-body
+                    .col-xs-3.col-xs-offset-5
+                      #loadbar(style='display: none;')
+                        #rotateG_01.blockG
+                        #rotateG_02.blockG
+                        #rotateG_03.blockG
+                        #rotateG_04.blockG
+                        #rotateG_05.blockG
+                        #rotateG_06.blockG
+                        #rotateG_07.blockG
+                        #rotateG_08.blockG
+                    #quiz.quiz(data-toggle='buttons')
+                      label.element-animation1.btn.btn-lg.btn-warning.btn-block
+                        span.btn-label
+                          i.glyphicon.glyphicon-chevron-right
+                        input(type='radio', name='q_answer', value='1')
+                        | #{c1}
+                      label.element-animation2.btn.btn-lg.btn-warning.btn-block
+                        span.btn-label
+                          i.glyphicon.glyphicon-chevron-right
+                        input(type='radio', name='q_answer', value='2')
+                        | #{c2}
+                      label.element-animation3.btn.btn-lg.btn-warning.btn-block
+                        span.btn-label
+                          i.glyphicon.glyphicon-chevron-right
+                        input(type='radio', name='q_answer', value='3')
+                        | #{c3}
+                      label.element-animation4.btn.btn-lg.btn-warning.btn-block
+                        span.btn-label
+                          i.glyphicon.glyphicon-chevron-right
+                        input(type='radio', name='q_answer', value='4')
+                        | #{c4}
+                  .modal-footer.text-muted
+                    .dica
+                      p.text-left
+                        | Ta perdido?
+                        a(href='', data-toggle='modal', data-target='#myModal')
+                          | Ver dica
+                          img(src='img/dica.png')
+                      // Modal
+                      #myModal.modal.fade(role='dialog')
+                        .modal-dialog
+                          // Modal content
+                          .modal-content
+                            .modal-header
+                              button.close(type='button', data-dismiss='modal') ×
+                              h4.modal-title Passo a passo
+                            .modal-body
+                              ul.list-group.tutorial
+                                li.list-group-item
+                                  h5 Passo 1:
+                                  |  ...
+                                li.list-group-item
+                                  h5 Passo 2:
+                                  |  ...
+                                li.list-group-item
+                                  h5 Passo 2.2:
+                                  |  ...
+                                li.list-group-item
+                                  h5 Passo 3:
+                                  |  x -> 
+                                  span(style='font-style: italic;font-size:18px;font-weight:bold') 1/8
+                            .modal-footer
+                              button.btn.btn-default(type='button', data-dismiss='modal') Close
+                      span#answer
+            // /.row
+          // /.container-fluid
+        // /#page-wrapper
+      // /#wrapper
+      script(type='text/javascript').
+        $(function(){
+        var loading = $('#loadbar').hide();
+        $(document)
+        .ajaxStart(function () {
+        loading.show();
+        }).ajaxStop(function () {
+        loading.hide();
+        });
+        $("label.btn").on('click',function () {
+        var choice = $(this).find('input:radio').val();
+        $('#loadbar').show();
+        $('#quiz').fadeOut();
+        setTimeout(function(){
+        $( "#answer" ).html(  $(this).checking(choice) );
+        $('#quiz').show();
+        $('#loadbar').fadeOut();
+        /* something else */
+        }, 1500);
+        });
+        $ans = 3;
+        $.fn.checking = function(ck) {
+        if (ck != $ans)
+        return 'INCORRECT';
+        else
+        return 'CORRECT';
+        };
+        });

@@ -1,0 +1,53 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+#menu{
+	background-color: #00497d;
+	border-collapse: collapse;
+	text-align: center;
+	z-index:3;
+	width:300px;
+	font-weight: 100;
+}
+#logo{
+	padding-left: 10px;
+}
+#rodape{
+	background-color: #051E30;	
+}
+#menu ul a{
+	font-size: 20px;
+	color: #ffffff;
+}
+#menu ul a:hover{
+	text-transform: uppercase;	
+}
+#menu ul a:active{
+	background-color: #FFB100;
+	font-weight: bold;
+}
+#menu ul a:visited{
+	background-color: #FFB100;
+	font-weight: bold;
+}
+.radio{
+	font-size: 25px;
+	color: #00497d;
+}
+#conteudo{
+	height: 515px;
+}
+.dica{
+	font-size: 20px;
+}
+.dica a{
+	color: #FFB100;	
+}
+.exit a{
+	text-align:right;
+	font-size:20px;
+	color: white;
+}
+nav#menu.w3-sidebar.w3-animate-left{
+	overflow-x: hidden;
+}

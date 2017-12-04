@@ -1,0 +1,83 @@
+*{
+	margin:0;
+	padding: 0;
+	font-size: 100%;
+	border:none;
+	outline: none;
+	font-weight: 300;
+	box-sizing: border-box;
+}
+.cabecalho{
+	width: 100%;
+	float:left;
+	padding: 3%, 4%;
+}
+.btn-menu{
+	display: none;
+	width: 56px;
+	height: 56px;
+	float: right;
+	text-align: center;
+	border-radius: 56px;
+	cursor: pointer;
+}
+.menu ul{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.menu li{
+	padding: 1.5%;
+}
+.menu li a{
+	padding: 1.5%, 3%;
+}
+.menu li a:hover{
+	border:1px solid;	
+}
+/*codigo para abrir e fechar menu
+<script>
+	$(".btn-menu").click(function(){
+		$(".menu").show
+	});
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) 
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height 
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding 
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid 
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+*/
+
