@@ -17,7 +17,7 @@ var md5             = require('md5');
 mongoose.connect('mongodb://localhost/slope');
 var db = mongoose.connection;
 
-var img;
+var img = [];
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -28,7 +28,7 @@ var storage = multer.diskStorage({
         var ext = name.slice(name.lastIndexOf('.'), name.length); 
         var hash = md5(name + Date.now());
         cb(null, hash + ext);
-        img = "uploads/" + hash + ext;  
+        img.push("uploads/" + hash + ext);  
         console.log(img);
     }
   });
@@ -48,6 +48,12 @@ var UserSchema = mongoose.Schema({
     },
     password: {
         type: String
+    },
+    progress: {
+        type: Number
+    },
+    limites:  {
+        type: Number
     }
 });
 
@@ -57,6 +63,9 @@ var QuestionSchema = mongoose.Schema({
        index: true
     },
     statement: {
+        type: String
+    },
+    tip: {
         type: String
     },
     c1: {
@@ -69,6 +78,9 @@ var QuestionSchema = mongoose.Schema({
         type: String
     },
     c4: {
+        type: String
+    },
+    tip: {
         type: String
     },
     correct: {
@@ -146,8 +158,7 @@ app.post('/login', function(req, res){
                     i++;
                 });
                 var random = Math.floor(Math.random() * i);
-                res.render('logado', { username : doc.username, statement : r[random].statement, 
-                c1 : r[random].c1, c2 : r[random].c2, c3 : r[random].c3, c4 : r[random].c4 });                      
+                res.render('slope');                      
             });            
         }
         else
@@ -157,9 +168,10 @@ app.post('/login', function(req, res){
       });
 });
 
-app.post('/register_question', upload.single('img'),function(req, res){
+app.post('/register_question', upload.array('img', 2) ,function(req, res){
     var question = {
-        statement : img,
+        statement : img[0],
+        tip: img[1],
         c1 : req.body.c1,
         c2 : req.body.c2,
         c3 : req.body.c3,
@@ -170,6 +182,7 @@ app.post('/register_question', upload.single('img'),function(req, res){
         console.log(err);
     });
     res.redirect('/');
+    img = [];
 });
 
 app.post('/register', function(req, res){
@@ -177,7 +190,9 @@ app.post('/register', function(req, res){
         name : req.body.name,
         email : req.body.email,
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
+        progress: 0,
+        limites : 0
     }
     User.create(user, function(err, user){
         console.log(err);
